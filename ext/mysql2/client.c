@@ -740,7 +740,7 @@ void rb_mysql_client_set_active_thread(VALUE self) {
     // mark this connection active
     wrapper->active_thread = thread_current;
   } else if (wrapper->active_thread == thread_current) {
-    rb_raise(cMysql2Error, "This connection is still waiting for a result, try again once you have the result");
+    rb_raise(cMysql2Error, "This connection is still waiting for a result, Hello");
   } else {
     VALUE inspect = rb_inspect(wrapper->active_thread);
     const char *thr = StringValueCStr(inspect);
